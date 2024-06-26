@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.uniaovoluntaria.databinding.ActivityLogin2Binding;
@@ -31,6 +32,11 @@ public class LoginActivity2 extends AppCompatActivity {
                 startActivity(new Intent(this, RecuperaContaActivity.class)));
 
         binding.btnEntrar.setOnClickListener(v ->validaDados());
+
+        binding.imgFundo.setImageResource(R.drawable.bg_wave);
+        binding.imgFundo.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+
     }
 
     private void validaDados() {
