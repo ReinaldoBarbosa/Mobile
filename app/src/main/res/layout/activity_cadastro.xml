@@ -28,17 +28,15 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="100dp"
                 android:src="@drawable/bg_retangulo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -46,7 +44,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="Cadastro"
-                android:textAllCaps="true"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -60,6 +60,8 @@
                 android:ems="10"
                 android:hint="Nome"
                 android:inputType="text"
+                android:background="@drawable/ic_inputs"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -68,11 +70,14 @@
                 android:id="@+id/editSenha"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/ic_inputs"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
@@ -80,11 +85,14 @@
                 android:id="@+id/editDataNasc"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/ic_inputs"
                 android:ems="10"
                 android:hint="Data de Nascimento"
                 android:inputType="text"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/editSenha" />
 
@@ -92,11 +100,14 @@
                 android:id="@+id/editSenha3"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/ic_inputs"
                 android:ems="10"
                 android:hint="Senha"
                 android:inputType="textPassword"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/editDataNasc" />
 
@@ -104,15 +115,27 @@
                 android:id="@+id/btnRecuperaConta"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/btn_buttons"
                 android:text="Cadastra-se"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/editSenha3" />
+                app:layout_constraintTop_toBottomOf="@+id/editSenha3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:srcCompat="@drawable/bg_line" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
