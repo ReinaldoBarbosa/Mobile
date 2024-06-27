@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".SplasActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="354dp"
         android:layout_marginEnd="178dp"
-        android:layout_marginBottom="356dp"
-        android:text="União Voluntaria"
+        android:layout_marginBottom="358dp"
+        android:src="@drawable/ic_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
