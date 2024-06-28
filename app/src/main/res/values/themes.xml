@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.UniaoVoluntaria" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/green</item>
     </style>
 
     <style name="Theme.UniaoVoluntaria" parent="Base.Theme.UniaoVoluntaria" />
