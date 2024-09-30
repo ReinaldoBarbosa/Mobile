@@ -54,7 +54,7 @@
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+                app:layout_constraintTop_toBottomOf="@+id/edtSenha" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -70,7 +70,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
             <EditText
-                android:id="@+id/editSenha"
+                android:id="@+id/edtSenha"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -83,7 +83,7 @@
                 android:textColorHint="@color/inputs"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
             <TextView
                 android:id="@+id/textRecuperaConta"
@@ -93,11 +93,11 @@
                 android:textColor="@color/cinza"
                 android:text="Esqueceu Senha?"
                 android:textSize="10dp"
-                app:layout_constraintEnd_toEndOf="@+id/editSenha"
-                app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+                app:layout_constraintEnd_toEndOf="@+id/edtSenha"
+                app:layout_constraintTop_toBottomOf="@+id/edtSenha" />
 
             <EditText
-                android:id="@+id/editEmail"
+                android:id="@+id/edtEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -114,7 +114,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <Button
-                android:id="@+id/btnRecuperaConta"
+                android:id="@+id/btnInserirUsuario"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"

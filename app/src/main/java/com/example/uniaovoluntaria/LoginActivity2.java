@@ -11,6 +11,9 @@ import android.widget.Toast;
 import com.example.uniaovoluntaria.databinding.ActivityLogin2Binding;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class LoginActivity2 extends AppCompatActivity {
 
     private ActivityLogin2Binding binding;
@@ -24,7 +27,7 @@ public class LoginActivity2 extends AppCompatActivity {
         setContentView(binding.getRoot());
         mAuth = FirebaseAuth.getInstance();
 
-        binding.btnRecuperaConta.setOnClickListener(view -> {
+        binding.btnInserirUsuario.setOnClickListener(view -> {
             startActivity(new Intent(this,CadastroActivity.class));
         });
 
@@ -40,8 +43,8 @@ public class LoginActivity2 extends AppCompatActivity {
     }
 
     private void validaDados() {
-        String email = binding.editEmail.getText().toString().trim();
-        String senha = binding.editSenha.getText().toString().trim();
+        String email = binding.edtEmail.getText().toString().trim();
+        String senha = binding.edtSenha.getText().toString().trim();
 
         if (!email.isEmpty()) {
             if (!senha.isEmpty()) {
@@ -55,16 +58,31 @@ public class LoginActivity2 extends AppCompatActivity {
     }
 
     private void loginFireBase(String email, String senha){
-        mAuth.signInWithEmailAndPassword(
-                email,senha
-        ).addOnCompleteListener(task -> {
-            if (task.isSuccessful()){
-                finish();
-                startActivity(new Intent(this, MainActivity.class));
+        try {
+
+            PreparedStatement pst = ConexaoSqlSever.conectar(context).prepareStatement(
+                    "SELECT eMail, senha FROM tbUsuario WHERE eMail=? AND senha=?");
+
+            //Os números abaixo são os indices da ordem dos campos da tabela
+            //Deve seguir a ordem
+            pst.setString(1,email);
+            pst.setString(2,senha);
+
+            ResultSet res = pst.executeQuery();
+
+            while (res.next()) {
+
+                LoginModel loginModel = new LoginModel();
+
+                loginModel.setEmail(res.getString(1));
+                loginModel.setSenha(res.getString(2));
+                return loginModel;
             }
-            else {
-                Toast.makeText(this, "Ocorreu um Erro", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return null;
+    }
     }
 }

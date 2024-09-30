@@ -53,7 +53,7 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
 
             <EditText
-                android:id="@+id/editName"
+                android:id="@+id/edtNome"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="136dp"
@@ -67,7 +67,7 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
 
             <EditText
-                android:id="@+id/editEmail"
+                android:id="@+id/edtEmail"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -79,10 +79,10 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/editName" />
+                app:layout_constraintTop_toBottomOf="@+id/edtNome" />
 
             <EditText
-                android:id="@+id/editDataNasc"
+                android:id="@+id/edtDate"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -94,10 +94,10 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
             <EditText
-                android:id="@+id/editSenha"
+                android:id="@+id/edtSenha"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -109,10 +109,10 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/editDataNasc" />
+                app:layout_constraintTop_toBottomOf="@+id/edtDate" />
 
             <Button
-                android:id="@+id/btnRecuperaConta"
+                android:id="@+id/btnInserirUsuario"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -125,7 +125,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/editSenha"
+                app:layout_constraintTop_toBottomOf="@+id/edtSenha"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageView

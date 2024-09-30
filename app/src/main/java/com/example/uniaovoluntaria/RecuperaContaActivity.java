@@ -28,7 +28,7 @@ public class RecuperaContaActivity extends AppCompatActivity {
 
 
     private void validaDados() {
-        String email = binding.editEmail.getText().toString().trim();
+        String email = binding.edtEmail.getText().toString().trim();
 
         if (!email.isEmpty()) {
             recuperaContaFireBase(email);
