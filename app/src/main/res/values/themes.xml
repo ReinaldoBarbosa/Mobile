@@ -1,8 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.UniaoVoluntaria" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.UniaoVoluntaria" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:statusBarColor">@color/green</item>
     </style>
 
     <style name="Theme.UniaoVoluntaria" parent="Base.Theme.UniaoVoluntaria" />
+
+    <style name="ShapeAppearanceOverlay.App.circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ThemeOverlay.UniaoVoluntaria.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>

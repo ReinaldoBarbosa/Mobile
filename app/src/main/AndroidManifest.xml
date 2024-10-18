@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -14,31 +17,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniaoVoluntaria"
         tools:targetApi="31">
-
         <activity
-            android:name=".RecuperaContaActivity"
+            android:name=".view.teste"
+            android:exported="false" />
+        <activity
+            android:name=".view.Candidatura"
+            android:exported="false" />
+        <activity
+            android:name=".view.Editar"
+            android:exported="false" />
+        <activity
+            android:name=".view.ActivityEvento"
+            android:exported="false" />
+        <activity
+            android:name=".view.Eventos"
             android:exported="true" />
-
-
         <activity
-            android:name=".CadastroActivity"
+            android:name=".view.RecuperaContaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".SplasActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:name=".view.LoginActivity2"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>>
+        <activity
+            android:name=".view.SplasActivity"
+            android:exported="true"/>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".view.MainActivity"
+            android:exported="true"/>
+
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
